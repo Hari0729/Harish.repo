@@ -1,0 +1,71 @@
+class zomato
+{
+	public void zomato_app()
+	{
+		System.out.println("zomato_app");
+	}
+}
+class veg extends zomato
+{
+	public void veg_area()
+	{
+		System.out.println("veg_area  in zomato");
+	}
+}
+class non_veg extends zomato
+{
+	public void non_veg_menu()
+	{
+		System.out.println("non_veg_menu in zomato");
+	}
+}
+class dessert extends zomato
+{
+	public void dessert_menu()
+	{
+		System.out.println("dessert_menu in zomato");
+	}
+}
+class south extends veg
+{
+	public void south_menu()
+	{
+		System.out.println("south_menu in zomato");
+	}
+}
+class north extends veg
+{
+	public void north_menu()
+	{
+		System.out.println("north_menu in zomato");
+	}
+}
+class Projectzomato
+{
+	public static void main(String[] args) {
+		zomato z1=new zomato();
+		z1.zomato_app();
+		System.out.println("------------");
+		veg v1=new veg();
+		v1.veg_area();
+		v1.zomato_app();
+		System.out.println("-----------");
+		south s1=new south();
+		s1.veg_area();
+		s1.zomato_app();
+		s1.south_menu();
+		System.out.println("-----------");
+		north n1=new north();
+		n1.veg_area();
+		n1.zomato_app();
+		n1.north_menu();
+		System.out.println("--------");
+		non_veg nv1=new non_veg();
+		nv1.zomato_app();
+		nv1.non_veg_menu();
+		System.out.println("--------");
+		dessert d1 =new dessert();
+		d1.dessert_menu();
+		d1.zomato_app();
+	}
+}
