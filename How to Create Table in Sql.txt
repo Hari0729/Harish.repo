@@ -1,0 +1,16 @@
+-- Create the Amazon table
+CREATE TABLE amazon (
+  reg_id NUMBER(4) PRIMARY KEY,
+  product_name VARCHAR2(16) NOT NULL,
+  product_date DATE
+);
+
+-- Create the Deliver_Date table
+CREATE TABLE deliver_date (
+  package_id NUMBER(4) PRIMARY KEY,
+  deliver_succ VARCHAR2(7) NOT NULL,
+  customer_number NUMBER(10) UNIQUE CHECK (LENGTH(customer_number) = 10),
+  return_product DATE,
+  reg_id NUMBER(4),
+  FOREIGN KEY (reg_id) REFERENCES amazon(reg_id)
+);
